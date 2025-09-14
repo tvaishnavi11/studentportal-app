@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+
+</head>
+
+<body style="background:url(student/WhatsApp\ Image\ 2025-09-12\ at\ 15.23.08_b37dccad.jpg) ;">
+
+
+    <header>
+        <h1> Indian Institutes of Technology (About Clases at the institude at the U)</h1>
+    </header>
+
+    <nav>
+
+        <a href="NewWebpage.html">About</a>
+        <a href="C:\HTML\HTML\student\login2.html">Login</a>
+        <a href="C:\HTML\HTML\sign in.html">Sign In</a>
+        <!-- <a href="C:\HTML\HTML\Dashbord3.html">Dashbord</a>-->
+
+    </nav>
+
+    <h1><b>Welcome to Student Login Portal</b></h1>
+    <!-- Registration Form -->
+    <div class="container">
+        <h2>Student Registration</h2>
+        <form id="registerForm">
+            <input type="text" id="name" placeholder="Full Name" required>
+            <input type="email" id="email" placeholder="Email" required>
+            <input type="password" id="password" placeholder="Password" required>
+            <button type="submit">Register</button>
+        </form>
+
+        <p>Already registered? <a href="C:\HTML\HTML\student\login2.html " onclick="showLogin()">Login</a></p>
+        <lable><a href="C:\HTML\HTML\sign in.html">Sign </a></lable>
+        <img src="student/FER6UUQRUAT2YMLXHOOHWQJHIQ.avif" alt="About Classes"
+            style="align-items: right; width: 900px; height: 500px; margin-left: 400px;margin-top: -500px;  border-radius: 20px;">
+
+
+        <script>
+            // Registration
+            document.addEventListener("DOMContentLoaded", () => {
+                const regForm = document.getElementById("registerForm");
+                const loginForm = document.getElementById("loginForm");
+
+                if (regForm) {
+                    regForm.addEventListener("submit", (e) => {
+                        e.preventDefault();
+                        let student = {
+                            name: document.getElementById("name").value,
+                            email: document.getElementById("email").value,
+                            pass: document.getElementById("password").value
+                        };
+                        localStorage.setItem("student", JSON.stringify(student));
+                        alert("Registered! Now login.");
+
+                    }
+                    );
+                }
+            });
+            // Show Login Form
+            function showLogin() {
+                document.getElementById("registerForm").style.display = "none";
+                document.getElementById("loginForm").style.display = "block";
+            }
+        </script>
+    </div>
+</body>
+
+</html>
